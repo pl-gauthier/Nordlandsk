@@ -1,6 +1,5 @@
 %% Nordlandsk
-%% fløyte atom test
-%% commit?
+%% fløyte
 
 fløyte = \relative c' {
 
