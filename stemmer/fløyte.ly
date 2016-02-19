@@ -1,5 +1,5 @@
 %% Nordlandsk
-%% fløyte
+%% fløyter
 
 fløyte = \relative c' {
 
