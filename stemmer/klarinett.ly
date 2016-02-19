@@ -1,5 +1,5 @@
 %% Nordlandsk
-%% Klarinett Bb
+%% klarinett  iBb
 
 klarinett = \relative c' {
 
