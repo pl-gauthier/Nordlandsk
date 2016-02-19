@@ -1,6 +1,5 @@
 %% Nordlandsk Partitur
-\version{2.19.36}
-
+\version "2.19.36"
 
 
 \include "stemmer/bratsj.ly"
