@@ -1,5 +1,5 @@
 %% Nordlandsk
-%% Horn i F
+%% horn i F
 
 horn = \relative c' {
 

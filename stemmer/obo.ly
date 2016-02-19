@@ -1,5 +1,5 @@
 %% Nordlandsk
-%% Obo
+%% obo
 
 obo = \relative c' {
 

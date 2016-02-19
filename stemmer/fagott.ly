@@ -1,5 +1,5 @@
 %% Nordlandsk
-%% Fagott
+%% fagott
 
 fagott = \relative c' {
 

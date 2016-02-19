@@ -1,5 +1,5 @@
 %% Nordlandsk
-%% Trompet Bb
+%% trompet i Bb
 
 trompet = \relative c' {
 
