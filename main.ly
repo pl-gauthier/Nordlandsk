@@ -19,16 +19,12 @@
 \include "stemmer/trompet.ly"
 
 global = {
-  \time 2/4
   \tempo 4 = 75
   \key c \major
-
 }
 
-
-
 kontrabassNavn =  \markup {
-  \raise #5.5 
+  \raise #5.5
   \score {
     \new Staff \with {
       \remove "Time_signature_engraver"
@@ -102,7 +98,7 @@ kontrabassNavn =  \markup {
         instrumentName = "Bassoon"
       }
       {
-        \fagott
+        \global \fagott
       }
     >>
     \new StaffGroup <<
@@ -149,7 +145,7 @@ kontrabassNavn =  \markup {
         instrumentName = "Timpani i D. A. E."
       }
       {
-        \global \pauke
+        \pauke
       }
     >>
     \new StaffGroup <<
@@ -157,31 +153,31 @@ kontrabassNavn =  \markup {
         instrumentName = "Violin I"
       }
       {
-        \global \fiolinEn
+        \fiolinEn
       }
       \new Staff \with {
         instrumentName = "Violin II"
       }
       {
-        \global \fiolinTo
+        \fiolinTo
       }
       \new Staff \with {
         instrumentName = "Viola"
       }
       {
-        \global \bratsj
+        \bratsj
       }
       \new Staff \with {
         instrumentName = "Cello"
       }
       {
-        \global \celli
+        \celli
       }
       \new Staff \with {
         instrumentName = \kontrabassNavn
       }
       {
-        \global \kontrabass
+        \kontrabass
       }
     >>
   >>

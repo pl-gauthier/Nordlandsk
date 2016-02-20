@@ -1,6 +1,6 @@
 %% Nordlandsk
 %% klarinett  iBb
 
-klarinett = \relative c' {
-
+klarinett = \relative c''' {
+r4 r8 b\fz |%1
 }

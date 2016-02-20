@@ -1,6 +1,7 @@
 %% Nordlandsk
 %% trompet i Bb
 
-trompet = \relative c' {
+trompet = \relative c'' {
+r4 r8 b\fz |%1
 
 }
