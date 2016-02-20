@@ -3,6 +3,6 @@
 
 triangel = \relative c' {
   \clef percussion
-  r1 |%m1
+  r2 |%m1
 
 }

@@ -21,6 +21,7 @@
 global = {
   \tempo 4 = 75
   \key c \major
+  \time 2/4
 }
 
 kontrabassNavn =  \markup {
@@ -34,7 +35,7 @@ kontrabassNavn =  \markup {
       \set Staff.instrumentName = \markup \large "Double Bass"
       \clef bass \cadenzaOn
       \override Stem.transparent = ##t
-      <c, a, d g>4  \bar ""
+      < c, a, d g >4  \bar ""
     }
     \layout {
       ragged-right = ##t
@@ -44,18 +45,12 @@ kontrabassNavn =  \markup {
   \hspace #.5
 }
 
-
-
-
 \header {
   title = "Nordlandsk"
   composer = "Fridthjov Anderssen"
   arranger = "Orchestrated by: C.Buschmann"
   tagline = ##f
 }
-
-
-
 
 \paper{
   #(set-paper-size "a3")
@@ -145,7 +140,7 @@ kontrabassNavn =  \markup {
         instrumentName = "Timpani i D. A. E."
       }
       {
-        \pauke
+       \global \pauke
       }
     >>
     \new StaffGroup <<
@@ -153,31 +148,31 @@ kontrabassNavn =  \markup {
         instrumentName = "Violin I"
       }
       {
-        \fiolinEn
+       \global \fiolinEn
       }
       \new Staff \with {
         instrumentName = "Violin II"
       }
       {
-        \fiolinTo
+       \global \fiolinTo
       }
       \new Staff \with {
         instrumentName = "Viola"
       }
       {
-        \bratsj
+       \global \bratsj
       }
       \new Staff \with {
         instrumentName = "Cello"
       }
       {
-        \celli
+       \global \celli
       }
       \new Staff \with {
         instrumentName = \kontrabassNavn
       }
       {
-        \kontrabass
+        \global \kontrabass
       }
     >>
   >>
