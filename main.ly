@@ -20,7 +20,7 @@
 
 global = {
   \tempo 4 = 75
-  \key c \major
+  \key a \minor
   \time 2/4
   %\set Timing.beatStructure = #'(2 2)
 
