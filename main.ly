@@ -61,7 +61,6 @@ kontrabassNavn =  \markup {
   bottom-margin = 15\mm
   indent = 3\cm
 
-
 }
 
 \layout{
@@ -138,7 +137,7 @@ kontrabassNavn =  \markup {
       }
 
       \new Staff  \with {
-        instrumentName = "Timpani i D. A. E."
+        instrumentName = \markup {\center-column { "Timpani in" \line { D. A. E. }}}
       }
       {
         \global \pauke
