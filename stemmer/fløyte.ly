@@ -17,7 +17,7 @@ fløyte = \relative c'' {
  r b r c |%11}
  \alternative{
    { r8 d c r }
-   { r d c e-- \bar "||"}
+   { r d c e-- }
  }
  \mark \default
  e16( a-.) a8-> a16( gis) gis( e) |%15

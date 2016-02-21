@@ -36,17 +36,13 @@
 }
 
 \layout{
-\context {
-    \Voice
-    \override Stem.stemlet-length = 2
-  }
+
 }
 
 global = {
   \tempo 4 = 75
   \key a \minor
   \time 2/4
-  %\set Timing.beatStructure = #'(2 2)
   \set Score.markFormatter = #format-mark-box-barnumbers
 
 }
@@ -190,6 +186,7 @@ kontrabassNavn =  \markup {
       }
       \new Staff \with {
         instrumentName = \kontrabassNavn
+        shortInstrumentName = #"B. "
       }
       {
         \global \kontrabass
