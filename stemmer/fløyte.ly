@@ -14,11 +14,12 @@ fløyte = \relative c'' {
  r b r e'\fz |%8
  r c,\p r c |%9
  r d r c |%10
- r b r c }
+ r b r c |%11}
  \alternative{
    { r8 d c r }
    { r d c e-- \bar "||"}
  }
  \mark \default
+ e16( a-.) a8-> a16( gis) gis( e) |%15
 
 }

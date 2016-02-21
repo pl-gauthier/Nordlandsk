@@ -190,7 +190,6 @@ kontrabassNavn =  \markup {
       }
       \new Staff \with {
         instrumentName = \kontrabassNavn
-        shortInstrumentName = #"B. "
       }
       {
         \global \kontrabass
