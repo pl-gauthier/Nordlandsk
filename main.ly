@@ -18,34 +18,6 @@
 \include "stemmer/trombone.ly"
 \include "stemmer/trompet.ly"
 
-global = {
-  \tempo 4 = 75
-  \key c \major
-  \time 2/4
-  \set Timing.beatStructure = #'(2 2)
-
-}
-
-kontrabassNavn =  \markup {
-  \raise #5.5
-  \score {
-    \new Staff \with {
-      \remove "Time_signature_engraver"
-      fontSize = #-3
-      \override StaffSymbol.staff-space = #(magstep -3)
-    } {
-      \set Staff.instrumentName = \markup \large "Double Bass"
-      \clef bass \cadenzaOn
-      \override Stem.transparent = ##t
-      < c, a, d g >4  \bar ""
-    }
-    \layout {
-      ragged-right = ##t
-      indent = 1\cm
-    }
-  }
-  \hspace #.5
-}
 
 \header {
   title = "Nordlandsk"
@@ -62,30 +34,62 @@ kontrabassNavn =  \markup {
   bottom-margin = 15\mm
   indent = 3\cm
 
-
 }
 
 \layout{
+
+}
+
+
+global = {
+  \tempo 4 = 75
+  \key a \minor
+  \time 2/4
+  %\set Timing.beatStructure = #'(2 2)
+}
+
+kontrabassNavn =  \markup {
+  \raise #5.5
+  \score {
+    \new Staff \with {
+      \remove "Time_signature_engraver"
+      fontSize = #-3
+      \override StaffSymbol.staff-space = #(magstep -3)
+    } {
+      \set Staff.instrumentName = \markup \large "Double Bass"
+      \clef bass \cadenzaOn
+      \override Stem.transparent = ##t
+      < c, a, d g >4 s8 \bar ""
+    }
+    \layout {
+      ragged-right = ##t
+      indent = 1\cm
+    }
+  }
+  \hspace #.5
 }
 
 \score{
   <<
     \new StaffGroup<<
       \new Staff \with {
-        instrumentName = "Flute"
+        instrumentName = #"Flute"
+        shortInstrumentName = #"Fl. "
       }
       {
         \global \fløyte
       }
       \new Staff \with {
 
-        instrumentName = "Oboe"
+        instrumentName = #"Oboe"
+        shortInstrumentName = #"Ob. "
       }
       {
         \global \obo
       }
       \new Staff \with {
-        instrumentName = "Clarinett in Bb"
+        instrumentName = #"Clarinett in Bb"
+        shortInstrumentName = #"Cl. "
       }
       {
         \transpose bes c { \global \klarinett }
@@ -138,10 +142,10 @@ kontrabassNavn =  \markup {
       }
 
       \new Staff  \with {
-        instrumentName = "Timpani i D. A. E."
+        instrumentName = \markup {\center-column { "Timpani in" \line { D. A. E. }}}
       }
       {
-       \global \pauke
+        \global \pauke
       }
     >>
     \new StaffGroup <<
@@ -149,25 +153,25 @@ kontrabassNavn =  \markup {
         instrumentName = "Violin I"
       }
       {
-       \global \fiolinEn
+        \global \fiolinEn
       }
       \new Staff \with {
         instrumentName = "Violin II"
       }
       {
-       \global \fiolinTo
+        \global \fiolinTo
       }
       \new Staff \with {
         instrumentName = "Viola"
       }
       {
-       \global \bratsj
+        \global \bratsj
       }
       \new Staff \with {
         instrumentName = "Cello"
       }
       {
-       \global \celli
+        \global \celli
       }
       \new Staff \with {
         instrumentName = \kontrabassNavn
