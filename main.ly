@@ -18,11 +18,34 @@
 \include "stemmer/trombone.ly"
 \include "stemmer/trompet.ly"
 
+
+\header {
+  title = "Nordlandsk"
+  composer = "Fridthjov Anderssen"
+  arranger = "Orchestrated by: C.Buschmann"
+  tagline = ##f
+}
+
+\paper{
+  #(set-paper-size "a3")
+  top-margin = 15\mm
+  left-margin = 25\mm
+  right-margin = 25\mm
+  bottom-margin = 15\mm
+  indent = 3\cm
+
+}
+
+\layout{
+
+}
+
+
 global = {
   \tempo 4 = 75
   \key a \minor
   \time 2/4
-
+  %\set Timing.beatStructure = #'(2 2)
 }
 
 kontrabassNavn =  \markup {
@@ -46,45 +69,27 @@ kontrabassNavn =  \markup {
   \hspace #.5
 }
 
-\header {
-  title = "Nordlandsk"
-  composer = "Fridthjov Anderssen"
-  arranger = "Orchestrated by: C.Buschmann"
-  tagline = ##f
-}
-
-\paper{
-  #(set-paper-size "a3")
-  top-margin = 15\mm
-  left-margin = 25\mm
-  right-margin = 25\mm
-  bottom-margin = 15\mm
-  indent = 3\cm
-
-}
-
-\layout{
-
-}
-
 \score{
   <<
     \new StaffGroup<<
       \new Staff \with {
-        instrumentName = "Flute"
+        instrumentName = #"Flute"
+        shortInstrumentName = #"Fl. "
       }
       {
         \global \fløyte
       }
       \new Staff \with {
 
-        instrumentName = "Oboe"
+        instrumentName = #"Oboe"
+        shortInstrumentName = #"Ob. "
       }
       {
         \global \obo
       }
       \new Staff \with {
-        instrumentName = "Clarinett in Bb"
+        instrumentName = #"Clarinett in Bb"
+        shortInstrumentName = #"Cl. "
       }
       {
         \transpose bes c { \global \klarinett }
