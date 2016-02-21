@@ -99,6 +99,7 @@ kontrabassNavn =  \markup {
       }
       \new Staff \with {
         instrumentName = "Bassoon"
+        shortInstrumentName = #"Bn. "
       }
       {
         \global \fagott
@@ -107,18 +108,21 @@ kontrabassNavn =  \markup {
     \new StaffGroup <<
       \new Staff \with {
         instrumentName = "Horn in F"
+        shortInstrumentName = #"Hn. "
       }
       {
         \transpose f c { \global \horn }
       }
       \new Staff \with {
         instrumentName = "Trumpet in Bb"
+        shortInstrumentName = #"Tpt. "
       }
       {
         \transpose bes c { \global \trompet }
       }
       \new Staff \with {
         instrumentName = "Trombone"
+        shortInstrumentName = #"Tbn. "
       }
       {
         \global \trombone
@@ -127,18 +131,21 @@ kontrabassNavn =  \markup {
     \new StaffGroup<<
       \new RhythmicStaff  \with {
         instrumentName = "Snare"
+        shortInstrumentName = #"Sn-d. "
       }
       {
         \global \skarptromme
       }
       \new RhythmicStaff  \with {
-        instrumentName = "Cymbal"
+        instrumentName = "Cym."
+        
       }
       {
         \global \cymbal
       }
       \new RhythmicStaff  \with {
         instrumentName = "Triangle"
+        shortInstrumentName = #"Tri. "
       }
       {
         \global \triangel
@@ -146,6 +153,7 @@ kontrabassNavn =  \markup {
 
       \new Staff  \with {
         instrumentName = \markup {\center-column { "Timpani in" \line { D. A. E. }}}
+        shortInstrumentName = #"Tmp. "
       }
       {
         \global \pauke
@@ -154,30 +162,35 @@ kontrabassNavn =  \markup {
     \new StaffGroup <<
       \new Staff \with {
         instrumentName = "Violin I"
+        shortInstrumentName = #"Vln I. "
       }
       {
         \global \fiolinEn
       }
       \new Staff \with {
         instrumentName = "Violin II"
+        shortInstrumentName = #"Vln II. "
       }
       {
         \global \fiolinTo
       }
       \new Staff \with {
         instrumentName = "Viola"
+        shortInstrumentName = #"Vla. "
       }
       {
         \global \bratsj
       }
       \new Staff \with {
         instrumentName = "Cello"
+        shortInstrumentName = #"Clo. "
       }
       {
         \global \celli
       }
       \new Staff \with {
         instrumentName = \kontrabassNavn
+        shortInstrumentName = #"B. "
       }
       {
         \global \kontrabass
