@@ -6,8 +6,8 @@ bratsj = \relative c' {
   a16.\f gis32 a16. b32 c8-. e\fz | %1
   a,16.\f gis32 a16. b32 c8-. e\fz | %2
   r8 c-.\f\> r gis-. | %3
-  r c-. r gis-.\p \bar "||" | %4
-  
+  r c-. r gis-.\p | %4
+    
   \repeat volta 2 { 
     r8^\markup { \italic{ sempre stacc. } }  a r a | %5
     r gis r a | %6
