@@ -22,7 +22,7 @@ global = {
   \tempo 4 = 75
   \key c \major
   \time 2/4
-  \set Timing.beatStructure = #'(2 2)
+  %\set Timing.beatStructure = #'(2 2)
 
 }
 
