@@ -22,8 +22,9 @@ global = {
   \tempo 4 = 75
   \key a \minor
   \time 2/4
-  %\set Timing.beatStructure = #'(2 2)
-
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(2 2)
 }
 
 kontrabassNavn =  \markup {
@@ -37,7 +38,7 @@ kontrabassNavn =  \markup {
       \set Staff.instrumentName = \markup \large "Double Bass"
       \clef bass \cadenzaOn
       \override Stem.transparent = ##t
-      < c, a, d g >4  \bar ""
+      < c, a, d g >4 s8 \bar ""
     }
     \layout {
       ragged-right = ##t
@@ -66,6 +67,16 @@ kontrabassNavn =  \markup {
 }
 
 \layout{
+  \context {
+    \Score
+    \remove "Timing_translator"
+    \remove "Default_bar_line_engraver"
+  }
+  \context {
+    \Staff
+    \consists "Timing_translator"
+    \consists "Default_bar_line_engraver"
+  }
 }
 
 \score{
@@ -141,7 +152,7 @@ kontrabassNavn =  \markup {
         instrumentName = "Timpani i D. A. E."
       }
       {
-       \global \pauke
+        \global \pauke
       }
     >>
     \new StaffGroup <<
@@ -149,25 +160,25 @@ kontrabassNavn =  \markup {
         instrumentName = "Violin I"
       }
       {
-       \global \fiolinEn
+        \global \fiolinEn
       }
       \new Staff \with {
         instrumentName = "Violin II"
       }
       {
-       \global \fiolinTo
+        \global \fiolinTo
       }
       \new Staff \with {
         instrumentName = "Viola"
       }
       {
-       \global \bratsj
+        \global \bratsj
       }
       \new Staff \with {
         instrumentName = "Cello"
       }
       {
-       \global \celli
+        \global \celli
       }
       \new Staff \with {
         instrumentName = \kontrabassNavn
