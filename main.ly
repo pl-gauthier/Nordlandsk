@@ -133,8 +133,9 @@ kontrabassNavn =  \markup {
         \global \skarptromme
       }
       \new RhythmicStaff  \with {
-        instrumentName = "Cym."
-        
+        instrumentName = "Cymbal "
+        shortInstrumentName = #"Cym. "
+
       }
       {
         \global \cymbal
