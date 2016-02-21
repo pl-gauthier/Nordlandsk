@@ -43,7 +43,7 @@
     \consists "Axis_group_engraver"
     \name "TimeSig"
     \alias "Staff"
-    \override TimeSignature.font-size = #3
+    \override TimeSignature.font-size = #7
     \override TimeSignature.break-align-symbol = ##f
     \override TimeSignature.X-offset =
       #ly:self-alignment-interface::x-aligned-on-self
