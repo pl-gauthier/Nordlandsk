@@ -36,10 +36,9 @@
 }
 
 \layout{
-  \context {
+\context {
     \Voice
-    \override Staff.Stem.stemlet-length = 2
-
+    \override Stem.stemlet-length = 2
   }
 }
 
