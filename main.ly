@@ -22,9 +22,7 @@ global = {
   \tempo 4 = 75
   \key a \minor
   \time 2/4
-  \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment 1/4)
-  \set Timing.beatStructure = #'(2 2)
+
 }
 
 kontrabassNavn =  \markup {
@@ -67,16 +65,7 @@ kontrabassNavn =  \markup {
 }
 
 \layout{
-  \context {
-    \Score
-    \remove "Timing_translator"
-    \remove "Default_bar_line_engraver"
-  }
-  \context {
-    \Staff
-    \consists "Timing_translator"
-    \consists "Default_bar_line_engraver"
-  }
+
 }
 
 \score{
