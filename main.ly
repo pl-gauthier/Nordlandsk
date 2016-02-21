@@ -36,8 +36,33 @@
 }
 
 \layout{
-
+  
+    \context {
+    \type "Engraver_group"
+    \consists "Time_signature_engraver"
+    \consists "Axis_group_engraver"
+    \name "TimeSig"
+    \alias "Staff"
+    \override TimeSignature.font-size = #3
+    \override TimeSignature.break-align-symbol = ##f
+    \override TimeSignature.X-offset =
+      #ly:self-alignment-interface::x-aligned-on-self
+    \override TimeSignature.self-alignment-X = #CENTER
+    \override TimeSignature.after-line-breaking =
+      #shift-right-at-line-begin
+  }
+  \context {
+    \Score
+    \accepts TimeSig
+  }
+  \context {
+    \Staff
+    \remove "Time_signature_engraver"
+  }
 }
+
+timeSignatures = { \numericTimeSignature \time 2/4 }
+
 
 global = {
   \tempo 4 = 75
@@ -70,6 +95,7 @@ kontrabassNavn =  \markup {
 
 \score{
   <<
+    \new TimeSig \timeSignatures
     \new StaffGroup<<
       \new Staff \with {
         instrumentName = #"Flute"
