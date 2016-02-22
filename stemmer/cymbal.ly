@@ -1,9 +1,9 @@
 %% Nordlandsk
 %% cymbal
 
-cymbal = \relative c' {
+cymbal = \drummode {
   \clef percussion
-  r2 |%m1
+  R2 |%m1
 R2*79
 
 }

@@ -1,9 +1,9 @@
 %% Nordlandsk
 %% triangel
 
-triangel = \relative c' {
+triangel = \drummode {
   \clef percussion
-  r2 |%m1
+  R2 |%m1
 R2*79
 
 }

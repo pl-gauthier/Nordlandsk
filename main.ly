@@ -36,8 +36,8 @@
 }
 
 \layout{
-  
-    \context {
+
+  \context {
     \type "Engraver_group"
     \consists "Time_signature_engraver"
     \consists "Axis_group_engraver"
@@ -46,10 +46,10 @@
     \override TimeSignature.font-size = #7
     \override TimeSignature.break-align-symbol = ##f
     \override TimeSignature.X-offset =
-      #ly:self-alignment-interface::x-aligned-on-self
+    #ly:self-alignment-interface::x-aligned-on-self
     \override TimeSignature.self-alignment-X = #CENTER
     \override TimeSignature.after-line-breaking =
-      #shift-right-at-line-begin
+    #shift-right-at-line-begin
   }
   \context {
     \Score
@@ -69,7 +69,7 @@ global = {
   \key a \minor
   \time 2/4
   \set Score.markFormatter = #format-mark-box-barnumbers
-
+  \compressFullBarRests
 }
 
 kontrabassNavn =  \markup {
@@ -151,23 +151,29 @@ kontrabassNavn =  \markup {
       }
     >>
     \new StaffGroup<<
-      \new RhythmicStaff  \with {
-        instrumentName = "Snare"
+      \new DrumStaff  \with {
+        drumStyleTable = #percussion-style
+        \override StaffSymbol.line-count = #1
+        instrumentName = "1 Snare"
         shortInstrumentName = #"Sn-d. "
       }
       {
         \global \skarptromme
       }
-      \new RhythmicStaff  \with {
-        instrumentName = "Cymbal "
+      \new DrumStaff  \with {
+        drumStyleTable = #percussion-style
+        \override StaffSymbol.line-count = #1
+        instrumentName = "1 Cymbal "
         shortInstrumentName = #"Cym. "
 
       }
       {
         \global \cymbal
       }
-      \new RhythmicStaff  \with {
-        instrumentName = "Triangle"
+      \new DrumStaff  \with {
+        drumStyleTable = #percussion-style
+        \override StaffSymbol.line-count = #1
+        instrumentName = "1 Triangle"
         shortInstrumentName = #"Tri. "
       }
       {
@@ -175,7 +181,7 @@ kontrabassNavn =  \markup {
       }
 
       \new Staff  \with {
-        instrumentName = \markup {\center-column { "Timpani in" \line { D. A. E. }}}
+        instrumentName = \markup {\center-column { "1 Timpani in" \line { D. A. E. }}}
         shortInstrumentName = #"Tmp. "
       }
       {
